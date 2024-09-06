@@ -18,6 +18,7 @@
 
 :root {
   --purple: rgba(133, 56, 255, 1);
+  --light-purple: rgba(204, 191, 255, 1);
   --light-pink: rgba(255, 222, 255, 1);
   --dark-pink: rgb(215, 129, 215);
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Question from './Question'; // Estilos para o Popup
+import Message from './Message';
 import logo from "../assets/logo.svg"
 import iconloc from "../assets/iconloc.svg"
 
@@ -30,13 +31,13 @@ const Home = () => {
             alignItems: 'center',
             marginBottom: '10px',
             position: 'relative',
-            padding: '10px'
           }}>
             {/* Data e Mês */}
             <div style={{
               width: '79px',
               height: '146px',
-              borderRadius: '8px',
+              borderTopLeftRadius: '8px',
+              borderBottomLeftRadius: '8px',
               backgroundColor: 'rgba(133, 56, 255, 1)',
               display: 'flex',
               flexDirection: 'column',

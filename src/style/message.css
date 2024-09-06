@@ -1,0 +1,19 @@
+.message-content {
+    width: 310px;
+    height: 126px;
+    border-radius: 16px;
+    background-color: var(--light-purple);
+    color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
