@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Quiz from './pages/Quiz';
+import Home from './pages/Home'; // Componente da nova página
+import Services from './pages/Services'; // Componente da nova página
+import Layout from './pages/Layout'; // Componente da nova página
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+
