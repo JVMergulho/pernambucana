@@ -1,33 +1,24 @@
 import React, { useState } from 'react';
+import Question from './Question'; // Estilos para o Popup
+import logo from "../assets/logo.svg"
+import iconloc from "../assets/iconloc.svg"
 
 const Home = () => {
   const [nome, setNome] = useState('Fátima');
 
   return (
     <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <img src={logo} alt="logo" className="logo4" />
 
-      <img src="logo.png" alt="Logo" style={{ marginBottom: '20px' }} />
-      
-      <h2>Olá, {nome}</h2>
+      <h2 style={{ fontSize: '24px' }}>
+        Olá, <span style={{ fontWeight: 'bold' }}>{nome}</span>
+      </h2>
 
-      <div style={{
-        width: '310px',
-        height: '126px',
-        borderRadius: '8px',
-        backgroundColor: 'rgba(255, 222, 255, 1)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        marginBottom: '20px',
-      }}>
-        <p>Quão preparada você se sente para atuar no mercado de trabalho com as qualificações que possui?</p>
-      </div>
+      <Question />
 
-      {/* Texto Informativo */}
       <p>Veja o que tem disponível na sua região baseada em seus interesses</p>
 
-      {/* Segunda ZStack - Scrollable */}
+      {/* Eventos */}
       <div style={{ position: 'relative', width: '310px', height: '400px', overflowY: 'auto' }}>
         {[...Array(3)].map((_, index) => (
           <div key={index} style={{
@@ -38,9 +29,10 @@ const Home = () => {
             display: 'flex',
             alignItems: 'center',
             marginBottom: '10px',
-            position: 'relative'
+            position: 'relative',
+            padding: '10px'
           }}>
-            {/* Data & Mês */}
+            {/* Data e Mês */}
             <div style={{
               width: '79px',
               height: '146px',
@@ -50,17 +42,20 @@ const Home = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              position: 'relative'
+              position: 'relative',
+              marginRight: '10px',
             }}>
-              <div style={{
-                width: '60px',
-                height: '146px',
-                backgroundColor: 'rgba(133, 56, 255, 1)',
-                position: 'absolute',
-                right: 0,
-              }}></div>
-              <p>data</p>
-              <p>mês</p>
+              <p style={{ margin: 0, fontSize: '40px', color: 'white', fontWeight: 'bold' }}>08</p>
+              <p style={{ margin: 0, fontSize: '19px', color: 'white', fontWeight: 'bold' }}>NOV</p>
+            </div>
+
+            <div>
+              <h4 style={{ fontSize: '14px', fontWeight: 'bold' }}>CURSOS PROFISSIONALIZANTES</h4>
+              <p style={{ fontSize: '12px' }}>A Sec Mulher PE vai promover cursos relacionados à culinária.</p>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src= { iconloc } alt="Localização" />
+                <p style={{ fontSize: '12px', marginLeft: '5px' }}>Casa Zero - Recife Antigo</p>
+              </div>
             </div>
           </div>
         ))}

@@ -12,9 +12,9 @@ const TabBar = () => {
       bottom: 0,
       width: '100%',
     }}>
-      <Link to="/services">Serviços</Link>
-      <Link to="/home">Home</Link>
-      <Link to="/quiz">Perfil</Link>
+      <Link to="/app/services">Serviços</Link>
+      <Link to="/app/home">Home</Link>
+      <Link to="/app/quiz">Perfil</Link>
     </div>
   );
 };

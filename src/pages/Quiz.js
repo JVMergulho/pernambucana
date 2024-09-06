@@ -8,7 +8,7 @@ const Quiz = () => {
 
   const handleContinue = () => {
     // Redireciona para a página desejada (ex: '/nextPage')
-    navigate('/Home');
+    navigate('/app/home');
   };
 
   const handleAlternative = (item) => {
