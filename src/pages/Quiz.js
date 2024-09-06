@@ -27,6 +27,7 @@ const Quiz = () => {
 
   const handleContinue = () => {
     // Redireciona para a página desejada (ex: '/nextPage')
+    localStorage.setItem('questionAnswered', 'false');
     navigate('/app/home');
   };
 

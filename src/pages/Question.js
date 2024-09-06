@@ -32,7 +32,7 @@ const Question = () => {
   }
 
   return (
-    <div className="container">
+    <div className="question-container">
       <Popup isOpen={isPopupOpen} onClose={closePopup}>
         <p>Notamos que você pode estar vivenciando uma situação de violência doméstica. 
           Esse tipo de violência é grave e pode ter consequências físicas, emocionais e 
@@ -43,7 +43,7 @@ const Question = () => {
       </Popup>
 
       <div className="rectangle">
-        <div className="content">
+        <div className="question-content">
           <p className="question">
             Quão preparada você se sente para atuar no mercado de trabalho com as qualificações que possui?
           </p>
