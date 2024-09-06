@@ -1,0 +1,91 @@
+.tela-interesses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .logo-container {
+    align-self: flex-end;
+    margin-right: 90px;
+    margin-top: 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 24px;
+  }
+  
+  .titulo-principal {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .descricao p {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .interesses-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .interesse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-pink);
+    width: 299px;
+    height: 52px;
+    padding: 0 10px;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  .interesse.selecionado {
+    background-color: var(--dark-pink);
+  }
+  
+  .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .icone {
+    font-size: 25px;
+    color: white;
+  }
+  
+  .botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 299px;
+    height: 52px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .botao.socorro {
+    background-color: red;
+    color: white;
+  }
+  
+  .botao img {
+    margin-right: 5px;
+  }
+  
+  .botao.continuar {
+    background-color: transparent;
+    color: var(--rosaClaro);
+  }
+  

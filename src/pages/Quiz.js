@@ -1,61 +1,82 @@
 import React, { useState } from 'react';
+import { FaCheckSquare, FaSquare } from 'react-icons/fa'; // Import icons
+import '../style/quiz.css';
+import logo from "../assets/logo.svg"
 import { useNavigate } from 'react-router-dom';
 
+// Modelo de Interesse
+const Interesse = ({ interesse, toggleSelecionado }) => {
+  return (
+    <div
+      className={`interesse ${interesse.selecionado ? 'selecionado' : ''}`}
+      onClick={() => toggleSelecionado(interesse.id)}
+    >
+      <span className="titulo">{interesse.titulo}</span>
+      {interesse.selecionado ? (
+        <FaCheckSquare className="icone" />
+      ) : (
+        <FaSquare className="icone" />
+      )}
+    </div>
+  );
+};
+
+// Componente principal
 const Quiz = () => {
-  const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]; // Lista de itens
   const navigate = useNavigate();
-  const [clickedItems, setClickedItems] = useState([]); // Para rastrear os botões clicados
 
   const handleContinue = () => {
     // Redireciona para a página desejada (ex: '/nextPage')
     navigate('/app/home');
   };
 
-  const handleAlternative = (item) => {
-    if (clickedItems.includes(item)) {
-      setClickedItems(clickedItems.filter((i) => i !== item)); // Remove o item se já foi clicado
-    } else {
-      setClickedItems([...clickedItems, item]); // Adiciona o item se ainda não foi clicado
-    }
+  const [interesses, setInteresses] = useState([
+    { id: 1, titulo: 'Proteção à mulher', selecionado: false },
+    { id: 2, titulo: 'Qualificação Profissional', selecionado: false },
+    { id: 3, titulo: 'Campanhas Educativas', selecionado: false },
+    { id: 4, titulo: 'Apoio à artesã', selecionado: false },
+    { id: 5, titulo: 'Formação de gênero', selecionado: false },
+    { id: 6, titulo: 'Documentação e Cidadania', selecionado: false },
+    { id: 7, titulo: 'Assessoria aos segmentos', selecionado: false }
+  ]);
+
+  const toggleSelecionado = (id) => {
+    setInteresses(
+      interesses.map((interesse) =>
+        interesse.id === id
+          ? { ...interesse, selecionado: !interesse.selecionado }
+          : interesse
+      )
+    );
   };
 
-  // Agrupa os itens em pares
-  const groupedItems = [];
-  for (let i = 0; i < items.length; i += 2) {
-    groupedItems.push(items.slice(i, i + 2));
-  }
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <div style={{ textAlign: 'center' }}>
-        <p>Bem vinda ao</p>
-        <p>Pernambucana</p>
-        <p>Nos ajude a te ajudar!</p>
-        <p>Selecione seus principais interesses ou necessidades.</p>
+    <div className="tela-interesses">
+      <div className="logo-container">
+        <img src= {logo} />
       </div>
 
-      <div>
-        {groupedItems.map((group, index) => (
-          <div key={index} style={{ display: 'flex', justifyContent: 'center', padding: '10px' }}>
-            {group.map((item) => (
-              <button
-                key={item}
-                onClick={() => handleAlternative(item)} // Redireciona ao clicar no botão
-                style={{
-                  width: '116px',
-                  height: '94px',
-                  backgroundColor: clickedItems.includes(item) ? 'green' : 'blue', // Muda a cor baseado no estado
-                  color: 'white',
-                  borderRadius: '8px',
-                  margin: '20px',
-                }}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+      <h1 className="titulo-principal">PERNAMBUCANA</h1>
+
+      <div className="descricao">
+        <p>Nos ajude a te ajudar! Selecione seus</p>
+        <p>principais interesses ou necessidades.</p>
+      </div>
+
+      <div className="interesses-lista">
+        {interesses.map((interesse) => (
+          <Interesse
+            key={interesse.id}
+            interesse={interesse}
+            toggleSelecionado={toggleSelecionado}
+          />
         ))}
       </div>
+
+      <button className="botao socorro">
+        <span>Pedir socorro</span>
+        <img src="iconeSocorro.png" alt="Ícone de Socorro" />
+      </button>
 
       <button
         onClick={handleContinue}
