@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Question from './Question'; // Estilos para o Popup
 import PersonalizedServices from './PersonalizedServices';
 import logo from "../assets/logo.svg"
@@ -6,6 +7,8 @@ import iconloc from "../assets/iconloc.svg"
 import '../style/home.css';
 
 const Home = () => {
+  const navigate = useNavigate();
+  
   const [nome, setNome] = useState('Fátima');
 
   return (

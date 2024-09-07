@@ -1,0 +1,114 @@
+.servico-macro-container {
+    padding: 20px;
+  }
+  
+  .servico-macro-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .servico-macro-back-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .servico-macro-back-button img {
+    margin-right: 8px;
+  }
+  
+  .servico-macro-back-button span {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(0.45, 0.11, 0.8);
+  }
+  
+  .servico-macro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .servico-macro-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+  
+  .servico-macro-title img {
+    margin-right: 8px;
+  }
+  
+  .servico-macro-title span {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  
+  .servico-macro-description {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 310px;
+  }
+  
+  .servico-macro-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 310px;
+  }
+  
+  .servico-macro-card {
+    background: transparent;
+    border: 1px solid rgb(0.85, 0.85, 0.85);
+    border-radius: 16px;
+    padding: 10px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  
+  .servico-macro-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .servico-macro-card-header img {
+    margin-right: 8px;
+  }
+  
+  .servico-macro-card-header span {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(0.94, 0.28, 0.96);
+  }
+  
+  .servico-macro-card-description {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .servico-macro-more-button {
+    display: flex;
+    align-items: center;
+    background: rgb(1, 0.87, 1);
+    border: none;
+    border-radius: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .servico-macro-more-button span {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(0.45, 0.11, 0.8);
+    margin-right: 8px;
+  }
+  
+  .servico-macro-more-button img {
+    margin-left: 8px;
+  }
+  

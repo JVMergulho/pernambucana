@@ -2,7 +2,7 @@
 import React from 'react';
 import '../style/popup.css'; // Estilos para o Popup
 
-const Popup = ({ isOpen, onClose, children }) => {
+const Popup = ({ isOpen, onClose, text }) => {
   if (!isOpen) return null;
 
   return (

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import '../style/login.css';
+import Popup from './PopupLocation'; // Importe o componente Popup
 import { useNavigate } from 'react-router-dom';
+import decoration from '../assets/logindecoration.svg';
 
 const Login = () => {
   const [cpf, setCpf] = useState('');
   const [senha, setSenha] = useState('');
   const [nomeSobrenome, setNomeSobrenome] = useState('');
+  const [isPopupOpen, setIsPopupOpen] = useState(true); // O popup será aberto por padrão
 
   const navigate = useNavigate();
 
@@ -15,10 +18,17 @@ const Login = () => {
     navigate('/quiz');
   };
 
+  const closePopup = () => {
+    setIsPopupOpen(false); // Fecha o popup
+  };
+
   return (
     <div className="login-container">
+
+      <Popup isOpen={isPopupOpen} onClose={closePopup} />
+
       <div className="login-image-container">
-        <img src="/path/to/loginImage.png" alt="Login" className="login-image" />
+        <img src={decoration} alt="Login" className="login-image" />
       </div>
 
       <div className="login-content">
