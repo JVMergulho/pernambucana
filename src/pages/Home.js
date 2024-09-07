@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Question from './Question'; // Estilos para o Popup
 import PersonalizedServices from './PersonalizedServices';
-import logo from "../assets/logo.svg"
-import iconloc from "../assets/iconloc.svg"
+import logo from "../assets/logo.svg";
+import iconloc from "../assets/iconloc.svg";
 import '../style/home.css';
 
 const Home = () => {
@@ -11,13 +11,56 @@ const Home = () => {
   
   const [nome, setNome] = useState('Fátima');
 
+  // Estado para armazenar os dados dos cards
+  const [cards, setCards] = useState([
+    {
+      id: 1,
+      date: '10',
+      month: 'NOV',
+      title: 'CURSOS PROFISSIONALIZANTES',
+      description: 'A Sec Mulher PE vai promover cursos relacionados à culinária.',
+      location: 'Casa Zero - Recife Antigo',
+    },
+    {
+      id: 2,
+      date: '16',
+      month: 'NOV',
+      title: 'RODA DE CONVERSA: EU MULHER!',
+      description: 'Karina Dias, mãe atípica e empreendedora conversará com mulheres da entre a pulso',
+      location: 'Espaço Tech - Recife Antigo',
+    },
+    {
+      id: 3,
+      date: '19',
+      month: 'NOV',
+      title: 'PALESTRA SOBRE INOVAÇÃO',
+      description: 'Entenda como a inovação está mudando o mercado.',
+      location: 'Centro de Eventos - Recife',
+    }
+  ]);
+
+  // Função para adicionar um novo card (exemplo)
+  const addCard = () => {
+    const newCard = {
+      id: cards.length + 1,
+      date: '11',
+      month: 'NOV',
+      title: 'NOVO EVENTO',
+      description: 'Descrição do novo evento.',
+      location: 'Novo Local - Recife',
+    };
+    setCards([...cards, newCard]);
+  };
+
   return (
     <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <img src={logo} alt="logo" className="logo4" />
 
-      <h2 style={{ fontSize: '24px' }}>
-        Olá, <span style={{ fontWeight: 'bold' }}>{nome}</span>
-      </h2>
+      <div>
+        <p>
+          Olá, <span style={{ fontWeight: 'bold' }}>{nome}</span>
+        </p>
+      </div>
 
       <Question />
 
@@ -29,8 +72,8 @@ const Home = () => {
 
       {/* Eventos */}
       <div style={{ position: 'relative', width: '310px', height: '400px', overflowY: 'auto' }}>
-        {[...Array(3)].map((_, index) => (
-          <div key={index} style={{
+        {cards.map((card) => (
+          <div key={card.id} style={{
             width: '310px',
             height: '146px',
             borderRadius: '8px',
@@ -54,16 +97,16 @@ const Home = () => {
               position: 'relative',
               marginRight: '10px',
             }}>
-              <p style={{ margin: 0, fontSize: '40px', color: 'white', fontWeight: 'bold' }}>08</p>
-              <p style={{ margin: 0, fontSize: '19px', color: 'white', fontWeight: 'bold' }}>NOV</p>
+              <p style={{ margin: 0, fontSize: '40px', color: 'white', fontWeight: 'bold' }}>{card.date}</p>
+              <p style={{ margin: 0, fontSize: '19px', color: 'white', fontWeight: 'bold' }}>{card.month}</p>
             </div>
 
             <div>
-              <h4 style={{ fontSize: '14px', fontWeight: 'bold' }}>CURSOS PROFISSIONALIZANTES</h4>
-              <p style={{ fontSize: '12px' }}>A Sec Mulher PE vai promover cursos relacionados à culinária.</p>
+              <h4 style={{ fontSize: '14px', fontWeight: 'bold' }}>{card.title}</h4>
+              <p style={{ fontSize: '12px' }}>{card.description}</p>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img src= { iconloc } alt="Localização" />
-                <p style={{ fontSize: '12px', marginLeft: '5px' }}>Casa Zero - Recife Antigo</p>
+                <img src={iconloc} alt="Localização" />
+                <p style={{ fontSize: '12px', marginLeft: '5px' }}>{card.location}</p>
               </div>
             </div>
           </div>
@@ -72,7 +115,7 @@ const Home = () => {
 
       {/* Botão com Imagem */}
       <div style={{ width: '315px', display: 'flex' }}>
-        <button style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+        <button style={{ background: 'none', border: 'none', cursor: 'pointer' }} onClick={addCard}>
           <img src="image.png" alt="Button Image" />
         </button>
       </div>

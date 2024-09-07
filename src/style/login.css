@@ -30,10 +30,6 @@
     text-align: center;
   }
   
-  .login-title-container {
-    margin-bottom: 10px;
-  }
-  
   .login-title {
     font-size: 24px;
     font-weight: bold;
@@ -48,7 +44,7 @@
   
   /* Descrição */
   .login-description {
-    font-size: 12px;
+    font-size: 14px;
     width: 245px;
     text-align: center;
     margin-bottom: 20px;
@@ -66,12 +62,12 @@
   }
   
   .login-input-title {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
   }
   
   .login-input-label {
-    font-size: 12px;
+    font-size: 14px;
   }
   
   .login-input {
@@ -108,8 +104,9 @@
     background: transparent;
     color: rgb(253, 97, 255);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     border: none;
+    margin-bottom: 80px;
   }
   

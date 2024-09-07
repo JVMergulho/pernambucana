@@ -11,6 +11,8 @@ import health from '../assets/iconhealth.svg'; // Importar a imagem
 import prof from '../assets/iconprof.svg'; // Importar a imagem
 import people from '../assets/iconpeople.svg'; // Importar a imagem
 import shield from '../assets/iconshield.svg'; // Importar a imagem
+import logo from '../assets/logo.svg'; // Importar a imagem
+import search from '../assets/searchicon.svg'; // Importar a imagem
 
 const servicesData = [
   { label: "Proteção à Mulher", image: woman, path: "/app/serviceMacro" },
@@ -55,9 +57,9 @@ const Services = () => {
     <div className="services-container">
       <div className="services-header">
         <div className="header-row">
-          <img src="logo2.png" alt="Logo" />
+          <img src={logo} alt="Logo" />
           <div className="flex-grow" />
-          <img src="busca.png" alt="Busca" />
+          <img style={{ width: '28px', height: '28px' }}  src={search} alt="Busca" />
         </div>
 
         <div className="header-row">

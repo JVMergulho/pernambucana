@@ -1,0 +1,66 @@
+/* Estilos para o Popup */
+.popuploc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Valor alto para garantir que o popup sobreponha outros elementos */
+  }
+  
+  .popuploc-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+    z-index: 1001; /* Certifica que o conteúdo do popup esteja acima do overlay */
+  }
+  
+  .popuploc-text {
+    margin-top: 10px;
+  }
+  
+  .popuploc-location img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .popuploc-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 20px;
+  }
+  
+  .popuploc-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--purple);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .popuploc-button-weak{
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      color: var(--purple);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  .popuploc-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../style/popup.css'; // Estilos para o Popup
+import '../style/popupLocation.css'; // Estilos para o Popup
 import pernambuco from '../assets/pernambucoZM.svg'; // Importa a imagem de Pernambuco
 
 const PopupLocation = ({ isOpen, onClose }) => {
@@ -59,31 +59,29 @@ const PopupLocation = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="popup-overlay">
-      <div className="popup-content">
+    <div className="popuploc-overlay">
+      <div className="popuploc-content">
         <div>
-          <h2>Atenção</h2>
+          <h3> Identificamos que você está em <b>{location.city}</b>, <b>{location.state}</b>.
+          </h3>
         </div>
-        <div className="popup-text">
+        <div className="popuploc-text">
           {loading && <p>Carregando localização...</p>}
           {error && <p>{error}</p>}
           {!loading && !error && (
-            <div className="popup-location">
+            <div className="popuploc-location">
               <img src={pernambuco} alt="Pernambuco" />
-              <p>
-                Identificamos que você está em <b>{location.city}</b>, <b>{location.state}</b>.
-              </p>
               <p>
                 Gostaria de ver informações personalizadas para a sua localização?
               </p>
             </div>
           )}
-          <div className="popup-buttons">
-            <button className="popup-button" onClick={onClose}>
-              Sim
-            </button>
-            <button className="popup-button" onClick={onClose}>
+          <div className="popuploc-buttons">
+            <button className="popuploc-button-weak" onClick={onClose}>
               Talvez depois
+            </button>
+            <button className="popuploc-button" onClick={onClose}>
+              Sim
             </button>
           </div>
         </div>
