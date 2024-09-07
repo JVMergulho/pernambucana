@@ -19,9 +19,18 @@
   width: 230px;
   height: 38px;
   border-radius: 8px;
+  border: none;
   margin-bottom: 20px;
   background-color: var(--purple);
   color: white; /* Cor do texto */
+}
+
+.popup-close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff; /* Cor do botão de fechar */
 }
 
 .popup-overlay {
@@ -35,6 +44,11 @@
   justify-content: center;
   align-items: center;
   z-index: 1000; /* Alta prioridade para sobrepor conteúdo */
+}
+
+.popup-text{
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .popup-content {
@@ -54,6 +68,16 @@
   right: 10px;
   border: none;
   background: transparent;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
 }
+
+/* Estilo para o cabeçalho do popup */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+

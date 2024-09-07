@@ -1,3 +1,4 @@
+// ServicoMacro.js
 import React from 'react';
 import '../style/serviceMacro.css'; // Arquivo CSS para estilos
 import { useNavigate } from 'react-router-dom';
@@ -5,9 +6,9 @@ import logo from '../assets/logopinkreverse.svg';
 import iconwoman from '../assets/iconwomanpurple.svg';
 import arrow from '../assets/arrow.svg';
 import backarrow from '../assets/backarrow.svg';
+import search from '../assets/searchicon.svg'; // Importar a imagem
 
 const ServicoMacro = () => {
-
   const navigate = useNavigate();
 
   return (
@@ -17,6 +18,7 @@ const ServicoMacro = () => {
           <img src={backarrow} alt="Nossos serviços" />
           <span>Nossos serviços</span>
         </button>
+        <img className="search-icon" style={{ width: '28px', height: '28px' }} src={search} alt="Busca" />
       </div>
 
       <div className="servico-macro-content">
@@ -37,7 +39,6 @@ const ServicoMacro = () => {
             {
               title: 'ABRIGOS TEMPORÁRIOS',
               description: 'Acolhimento em abrigos sigilosos para mulheres sob risco de morte devido à violência doméstica.',
-
             },
             {
               title: 'PATRULHA MARIA DA PENHA',
@@ -56,7 +57,7 @@ const ServicoMacro = () => {
               <p className="servico-macro-card-description">{card.description}</p>
               <button className="servico-macro-more-button" onClick={() => { navigate('/app/serviceInformation') }}>
                 <span>SAIBA MAIS</span>
-                <img src= {arrow} />
+                <img src={arrow} alt="Seta" />
               </button>
             </div>
           ))}

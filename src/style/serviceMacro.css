@@ -1,5 +1,17 @@
 .servico-macro-container {
     padding: 20px;
+    margin-bottom: 80px;
+  }
+
+  .servico-macro-header {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens ao longo do eixo horizontal */
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+  }
+  
+  .servico-macro-header img.search-icon {
+    margin-left: auto; /* Empurra o ícone de busca para a direita */
   }
   
   .servico-macro-header {
@@ -92,20 +104,23 @@
   }
   
   .servico-macro-more-button {
-    display: flex;
-    align-items: center;
-    background: rgb(1, 0.87, 1);
-    border: none;
-    border-radius: 16px;
-    padding: 10px;
-    cursor: pointer;
-  }
+      display: flex;
+      align-items: center;
+      background: rgb(1, 0.87, 1);
+      border: none;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      padding: 10px;
+      cursor: pointer;
+      color: var(--purple)
+    }
   
   .servico-macro-more-button span {
     font-size: 12px;
     font-weight: bold;
     color: rgb(0.45, 0.11, 0.8);
     margin-right: 8px;
+    color: var(--purple)
   }
   
   .servico-macro-more-button img {
@@ -114,7 +129,7 @@
   
 
   .servico-macro-more-button {
-    background-color: #ff69b4; /* Rosa claro */
+    background-color: var(--light-pink);
     border: none; /* Remove a borda padrão */
     color: white; /* Cor do texto */
     padding: 10px 20px; /* Ajusta o padding conforme necessário */

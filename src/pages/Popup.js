@@ -9,17 +9,18 @@ const Popup = ({ isOpen, onClose, text }) => {
     <div className="popup-overlay">
       <div className="popup-content">
         <div className="popup-header">
-            <h2>Atenção</h2>
+          <h2>Atenção</h2>
+          <button className="popup-close-button" onClick={onClose}>
+            &times; {/* O símbolo &times; representa o "x" */}
+          </button>
         </div>
         <div className="popup-text">
-            <p>Notamos que você pode estar vivenciando uma situação de violência doméstica. 
-                        Esse tipo de violência é grave e pode ter consequências físicas, emocionais e 
-                        psicológicas a longo prazo. Você não está sozinha!existem redes de apoio e caminhos 
-                        seguros para buscar ajuda. Denunciar pode ser o primeiro passo para recuperar 
-                        sua segurança e seu bem-estar.</p>
-            <button className="popup-button" onClick={onClose}>
-                MAIS INFORMAÇÕES
-            </button>
+          <p>Percebemos que você pode estar em uma situação de <b>vulnerabilidade social</b>.</p>
+          <p>Isso pode estar relacionado a fatores como dificuldades financeiras, falta de moradia segura ou acesso limitado a oportunidades de trabalho.</p>
+          <p>Sabemos o quanto isso pode impactar a sua qualidade de vida, mas existem recursos disponíveis para te apoiar e te ajudar a superar essas dificuldades.</p>
+          <button className="popup-button" onClick={onClose}>
+            MAIS INFORMAÇÕES
+          </button>
         </div>
       </div>
     </div>
