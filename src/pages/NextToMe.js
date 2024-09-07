@@ -34,7 +34,9 @@ const NextToMe = () => {
       </div>
 
       <div className="location-info">
-        <p>Use o mapa para visualizar sua localização atual e identificar os serviços de apoio disponíveis na sua região.</p>
+        <p>
+        Confira os pontos de socorro e atendimento à mulher mais próximos de você na sua região:
+        </p>
       </div>
 
       <div className="map-container">
@@ -51,10 +53,6 @@ const NextToMe = () => {
         )}
       </div>
 
-      <div className="next-description">
-        Pontos de socorro e atendimento à mulher mais próximos de você na sua região:
-      </div>
-
       <div className="cards-container">
         <div className="section-header">
           Delegacias Especializadas em Atendimento à Mulher (DEAM) em RECIFE
@@ -63,7 +61,9 @@ const NextToMe = () => {
         <div className="card">
           <div className="card-title">
             <img src={logoreverse} alt="DEAM" />
-            1ª DEAM do Recife
+            <p> 
+              1ª DEAM do Recife
+            </p>
           </div>
           <div className="card-description">
             <p><b>Endereço:</b> Praça do Campo Santo, s/n, Santo Amaro</p>
@@ -81,7 +81,7 @@ const NextToMe = () => {
         <div className="card">
           <div className="card-title">
             <img src={logoreverse} alt="Coordenadora" />
-            Coordenadora: Ana Patrícia
+            <p>Coordenadora: Ana Patrícia</p>
           </div>
           <div className="card-description">
             <p><b>Telefone:</b> (81) 98494-0521</p>

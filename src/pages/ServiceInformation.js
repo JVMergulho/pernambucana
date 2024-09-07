@@ -16,8 +16,8 @@ const ServiceInformation = () => {
 
   return (
     <ServiceTemplate 
-      title="Serviço de proteção, Atendimento e Abrigo"
       logo={logo}
+      title="Serviço de proteção, Atendimento e Abrigo"
       subtitle="Procedimentos e documentos necessários para o abrigamento:"
       content={content}
     />

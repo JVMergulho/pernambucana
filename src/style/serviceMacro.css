@@ -104,29 +104,30 @@
   }
   
   .servico-macro-more-button {
-      display: flex;
-      align-items: center;
-      background: rgb(1, 0.87, 1);
-      border: none;
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
-      padding: 10px;
-      cursor: pointer;
-      color: var(--purple)
-    }
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: var(--light-pink);
+    border: none; /* Remove a borda padrão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Ajusta o padding conforme necessário */
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 100%;
+  }
   
   .servico-macro-more-button span {
     font-size: 12px;
     font-weight: bold;
     color: rgb(0.45, 0.11, 0.8);
-    margin-right: 8px;
-    color: var(--purple)
+    margin-right: 8px; /* Espaço entre o texto e a seta */
   }
   
   .servico-macro-more-button img {
-    margin-left: 8px;
+    margin-left: 0px; /* Remove margens desnecessárias */
   }
-  
 
   .servico-macro-more-button {
     background-color: var(--light-pink);

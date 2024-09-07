@@ -18,10 +18,10 @@ const ServiceTemplate = ({ title, logo, subtitle, content }) => {
   
         {/* Título da página */}
         <div className="title">
-          <h1 className="main-title">{title}</h1>
           <div className="title-row">
             <img src={logo} alt="logo" className="logo" />
           </div>
+          <h1 className="main-title">{title}</h1>
         </div>
   
         {/* Descrição */}

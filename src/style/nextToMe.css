@@ -64,6 +64,12 @@
     font-size: 14px;
     font-weight: bold;
     color: #640064;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-title p{
+    margin-left: 10px;
   }
   
   .card-description {
@@ -78,14 +84,18 @@
     border-left: 1px solid #D9D9D9;
     background: linear-gradient(0deg, #CCBFFF 0%, #CCBFFF 100%), #FEDDFF;
     height: 40px;
-  }
-  
-  .copy-button {
-    font-size: 12px;
+    display: flex; /* Adicione flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.copy-button {
+    font-size: 14px;
     font-weight: bold;
     color: #72007d;
     background-color: transparent;
     border: none;
     cursor: pointer;
-  }
+}
+
   
