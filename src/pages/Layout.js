@@ -1,9 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import TabBar from './TabBar'; // Componente da nova página
-import helpsmall from '../assets/helpsmall.svg';
+import helpbig from '../assets/helpbig.svg';
 import megafone from '../assets/megafone.svg';
 import redsun from '../assets/redsun.svg';
+
 //import TabBar from './TabBar'; // Importe seu componente de Tab Bar
 
 const Layout = () => {

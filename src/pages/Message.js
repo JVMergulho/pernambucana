@@ -3,18 +3,13 @@ import React, { useState } from 'react';
 import heart from '../assets/purpleheart.svg'
 import '../style/message.css'
 
-const Question = () => {
-
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    const openPopup = () => setIsPopupOpen(true);
-    const closePopup = () => setIsPopupOpen(false);
+const Message = () => {
 
     return (
         <div className="message-container">
             <div className="message-content">
                 <img src= {heart} />
-                <p className="text">
+                <p className="message-text">
                     O governo de Pernambuco cuida de você.  Continue buscando oportunidades para crescer e se fortalecer.
                 </p>
             </div>
@@ -22,4 +17,4 @@ const Question = () => {
       );
 }
 
-export default Question;
+export default Message;

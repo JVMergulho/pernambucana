@@ -1,0 +1,112 @@
+/* Container principal */
+.login-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Imagem no topo */
+  .login-image-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .login-image {
+    width: 400px;
+    height: 190px;
+  }
+  
+  /* Conteúdo centralizado */
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .login-title-container {
+    margin-bottom: 10px;
+  }
+  
+  .login-title {
+    font-size: 12px;
+  }
+  
+  .login-titulo-image {
+    margin-top: -10px;
+  }
+  
+  /* Descrição */
+  .login-description {
+    font-size: 12px;
+    width: 245px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulário */
+  .login-form {
+    width: 100%;
+    max-width: 242px;
+  }
+  
+  /* Contêiner de campo de input */
+  .login-input-container {
+    margin-bottom: 20px;
+  }
+  
+  .login-input-title {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .login-input-label {
+    font-size: 12px;
+  }
+  
+  .login-input {
+    width: 100%;
+    height: 36px;
+    border-radius: 16px;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  /* Botão de "Pedir socorro" */
+  .login-button-sos {
+    width: 239px;
+    height: 48px;
+    border-radius: 48px;
+    background-color: rgb(240, 59, 20);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .login-button-icon {
+    margin-right: 10px;
+  }
+  
+  /* Botão de "Continuar" */
+  .login-button-continue {
+    background: transparent;
+    color: rgb(253, 97, 255);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+  }
+  

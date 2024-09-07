@@ -1,0 +1,26 @@
+.pservices-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+.pservices-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8px;
+  }
+
+.pservices-rectangle {
+    width: 61px;
+    height: 77px;
+    background-color: var(--chock-pink);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.pservices-text {
+    font-size: 12px;
+    margin-top: 4px;
+  }

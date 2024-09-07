@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Question from './Question'; // Estilos para o Popup
-import Message from './Message';
+import PersonalizedServices from './PersonalizedServices';
 import logo from "../assets/logo.svg"
 import iconloc from "../assets/iconloc.svg"
+import '../style/home.css';
 
 const Home = () => {
   const [nome, setNome] = useState('Fátima');
@@ -17,7 +18,11 @@ const Home = () => {
 
       <Question />
 
-      <p>Veja o que tem disponível na sua região baseada em seus interesses</p>
+      <p className='section-title'>Acesse os serviços</p>
+
+      <PersonalizedServices />
+
+      <p className='section-title'>Baseada em seus interesses</p>
 
       {/* Eventos */}
       <div style={{ position: 'relative', width: '310px', height: '400px', overflowY: 'auto' }}>

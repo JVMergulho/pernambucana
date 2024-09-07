@@ -1,14 +1,17 @@
 .message-content {
     width: 310px;
-    height: 126px;
+    height: 90px;
     border-radius: 16px;
-    background-color: var(--light-purple);
+    background-color: rgb(235, 233, 233);
     color: var(--purple);
+    font-size: 14px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 20px;
+    padding: 10px
   }
   
   .message-container {
@@ -16,4 +19,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .message-text{
+    margin-left: 10px;
   }

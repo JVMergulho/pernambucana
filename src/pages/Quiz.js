@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaCheckSquare, FaSquare } from 'react-icons/fa'; // Import icons
 import '../style/quiz.css';
 import logo from "../assets/logo.svg"
+import MapComponent from './Map';
 import { useNavigate } from 'react-router-dom';
 
 // Modelo de Interesse
@@ -53,6 +54,8 @@ const Quiz = () => {
 
   return (
     <div className="tela-interesses">
+
+      {/* <MapComponent /> */}
       <div className="logo-container">
         <img src= {logo} />
       </div>
@@ -74,21 +77,13 @@ const Quiz = () => {
         ))}
       </div>
 
-      <button className="botao socorro">
+      <button className="botao help">
         <span>Pedir socorro</span>
         <img src="iconeSocorro.png" alt="Ícone de Socorro" />
       </button>
 
-      <button
+      <button className="continue"
         onClick={handleContinue}
-        style={{
-          width: '88px',
-          height: '36px',
-          backgroundColor: 'blue',
-          color: 'white',
-          borderRadius: '50px',
-          marginTop: '20px',
-        }}
       >
         Continuar
       </button>
