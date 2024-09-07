@@ -80,6 +80,7 @@
     color: white;
     border: none;
     max-width: 300px;
+    border-radius: 50px;
   }
   
   .botao img {
@@ -92,5 +93,6 @@
     color: var(--purple);
     font-weight: bold; /* Define o texto como negrito */
     border: none; /* Remove o contorno (stroke) */
+    width: 100%;
   }
   

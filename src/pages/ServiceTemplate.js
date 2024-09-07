@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../style/serviceInformation.css'; // Use o mesmo arquivo CSS
+import backarrow from '../assets/backarrow.svg';
 
 const ServiceTemplate = ({ title, logo, subtitle, content }) => {
     const navigate = useNavigate(); 
@@ -9,9 +10,9 @@ const ServiceTemplate = ({ title, logo, subtitle, content }) => {
       <div className="serviceInformation-container">
         {/* Header com botão de voltar */}
         <div className="header">
-          <button onClick={() => navigate(-1)} className="back-button">
-            <span className="back-icon">←</span>
-            <span className="back-text">Proteção</span>
+          <button className="servico-macro-back-button" onClick={() => navigate(-1)}>
+            <img src={backarrow} alt="Nossos serviços" />
+            <span>Proteção</span>
           </button>
         </div>
   

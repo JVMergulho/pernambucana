@@ -4,6 +4,7 @@ import '../style/quiz.css';
 import logo from "../assets/logo.svg"
 import MapComponent from './Map';
 import { useNavigate } from 'react-router-dom';
+import help from '../assets/helpalternative.svg'
 
 // Modelo de Interesse
 const Interesse = ({ interesse, toggleSelecionado }) => {
@@ -79,7 +80,7 @@ const Quiz = () => {
 
       <button className="botao help">
         <span>Pedir socorro</span>
-        <img src="iconeSocorro.png" alt="Ícone de Socorro" />
+        <img src= {help} alt="Ícone de Socorro" />
       </button>
 
       <button className="continue"

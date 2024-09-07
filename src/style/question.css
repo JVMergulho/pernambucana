@@ -5,11 +5,11 @@
     text-align: center;
   }
   
-  .rectangle {
+  .question-rectangle {
     width: 310px;
     padding: 10px;
     height: 126px;
-    background-color:var(--light-pink);
+    background-color:rgb(235, 233, 233);
     border-radius: 8px;
     display: flex;
     align-items: center;

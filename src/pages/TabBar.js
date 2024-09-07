@@ -7,7 +7,7 @@ const TabBar = () => {
     <div className='tabBar-conteiner'>
       <Link to="/app/services">Serviços</Link>
       <Link to="/app/home">Home</Link>
-      <Link to="/app/quiz">Perfil</Link>
+      <Link to="/app/nexttome">Perto de Mim</Link>
     </div>
   );
 };

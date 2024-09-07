@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../style/popup.css'; // Estilos para o Popup
+import pernambuco from '../assets/pernambucoZM.svg'; // Importa a imagem de Pernambuco
 
 const PopupLocation = ({ isOpen, onClose }) => {
   const [location, setLocation] = useState({ city: '', state: '' });
@@ -67,13 +68,24 @@ const PopupLocation = ({ isOpen, onClose }) => {
           {loading && <p>Carregando localização...</p>}
           {error && <p>{error}</p>}
           {!loading && !error && (
-            <p>
-              Identificamos que você está em <b>{location.city}</b>, deseja receber informações de eventos voltados para mulheres nessa cidade?
-            </p>
+            <div className="popup-location">
+              <img src={pernambuco} alt="Pernambuco" />
+              <p>
+                Identificamos que você está em <b>{location.city}</b>, <b>{location.state}</b>.
+              </p>
+              <p>
+                Gostaria de ver informações personalizadas para a sua localização?
+              </p>
+            </div>
           )}
-          <button className="popup-button" onClick={onClose}>
-            MAIS INFORMAÇÕES
-          </button>
+          <div className="popup-buttons">
+            <button className="popup-button" onClick={onClose}>
+              Sim
+            </button>
+            <button className="popup-button" onClick={onClose}>
+              Talvez depois
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -65,8 +65,8 @@
     background: transparent;
     border: 1px solid rgb(0.85, 0.85, 0.85);
     border-radius: 16px;
-    padding: 10px;
     margin-bottom: 16px;
+    padding-top: 10px;
     position: relative;
   }
   
@@ -112,3 +112,15 @@
     margin-left: 8px;
   }
   
+
+  .servico-macro-more-button {
+    background-color: #ff69b4; /* Rosa claro */
+    border: none; /* Remove a borda padrão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Ajusta o padding conforme necessário */
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 100%;
+  }

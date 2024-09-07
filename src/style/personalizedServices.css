@@ -3,6 +3,11 @@
     flex-direction: row;
   }
 
+.service-button{
+  background-color: transparent;
+  border: none;
+}
+
 .pservices-item {
     display: flex;
     flex-direction: column;

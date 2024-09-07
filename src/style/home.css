@@ -9,12 +9,3 @@
     padding-bottom: 16px; /* Espaço entre o texto e a linha */
   }
   
-  .section-title::before {
-    content: '';
-    display: block;
-    width: 80%; /* Define a largura da linha como 80% do container */
-    height: 1px; /* Altura da linha */
-    background-color: #000; /* Cor da linha */
-    margin: 0 auto; /* Centraliza a linha */
-  }
-  

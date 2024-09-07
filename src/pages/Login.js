@@ -3,6 +3,7 @@ import '../style/login.css';
 import Popup from './PopupLocation'; // Importe o componente Popup
 import { useNavigate } from 'react-router-dom';
 import decoration from '../assets/logindecoration.svg';
+import logo from '../assets/logo.svg';
 
 const Login = () => {
   const [cpf, setCpf] = useState('');
@@ -33,8 +34,9 @@ const Login = () => {
 
       <div className="login-content">
         <div className="login-title-container">
-          <p className="login-title">Seja bem-vinda ao</p>
-          <img src="/path/to/tituloimage.png" alt="Título" className="login-titulo-image" />
+        <img src= {logo} alt="Título" className="login-titulo-image" />
+          <p>Seja bem-vinda ao</p>
+          <p className='login-title'>PERNAMBUCANA</p>
         </div>
         <p className="login-description">
           Feito para você pela Secretaria da Mulher do Governo do Estado de Pernambuco.

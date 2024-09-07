@@ -24,7 +24,7 @@ const MyComponent = () => {
     <div className='pservices-container'>
       {items.map((item, index) => (
         <div key={index} className='pservices-item'>
-          <button onClick={() => handleNavigate(item.path)}>
+          <button className='service-button' onClick={() => handleNavigate(item.path)}>
             <div className='pservices-rectangle'>
               <img src={item.img} alt="" className='pservices-image' />
             </div>

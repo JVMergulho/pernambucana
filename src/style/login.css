@@ -9,7 +9,6 @@
   
   /* Imagem no topo */
   .login-image-container {
-    position: absolute;
     top: 0;
     display: flex;
     justify-content: center;
@@ -36,11 +35,15 @@
   }
   
   .login-title {
-    font-size: 12px;
+    font-size: 24px;
+    font-weight: bold;
   }
   
   .login-titulo-image {
     margin-top: -10px;
+    position: relative;
+    left: 60px;
+    top: 60px;
   }
   
   /* Descrição */

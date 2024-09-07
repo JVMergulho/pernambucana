@@ -42,7 +42,7 @@ const Question = () => {
         <button onClick={closePopup}>Fechar</button>
       </Popup>
 
-      <div className="rectangle">
+      <div className="question-rectangle">
         <div className="question-content">
           <p className="question">
             Quão preparada você se sente para atuar no mercado de trabalho com as qualificações que possui?

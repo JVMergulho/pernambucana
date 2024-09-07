@@ -1,20 +1,28 @@
 import React from 'react';
 import '../style/serviceMacro.css'; // Arquivo CSS para estilos
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logopinkreverse.svg';
+import iconwoman from '../assets/iconwomanpurple.svg';
+import arrow from '../assets/arrow.svg';
+import backarrow from '../assets/backarrow.svg';
 
 const ServicoMacro = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="servico-macro-container">
       <div className="servico-macro-header">
-        <button className="servico-macro-back-button" onClick={() => { /* Lógica para voltar para a página de serviços */ }}>
-          <img src="/path/to/stladin.png" alt="Nossos serviços" />
+        <button className="servico-macro-back-button" onClick={() => navigate(-1)}>
+          <img src={backarrow} alt="Nossos serviços" />
           <span>Nossos serviços</span>
         </button>
       </div>
 
       <div className="servico-macro-content">
         <div className="servico-macro-title">
-          <img src="/path/to/iconmulherp.png" alt="Proteção" />
-          <span>PROTEÇÃO</span>
+          <img src={iconwoman} alt="Proteção" />
+          <span>Proteção </span>
         </div>
         <p className="servico-macro-description">
           Conheça as Iniciativas de Proteção e Suporte para Mulheres em Situação de Violência em Pernambuco.
@@ -25,33 +33,30 @@ const ServicoMacro = () => {
             {
               title: '190 MULHER',
               description: 'Atendimento prioritário para mulheres sob risco de violência doméstica e familiar.',
-              image: '/path/to/simbometade.png'
             },
             {
               title: 'ABRIGOS TEMPORÁRIOS',
               description: 'Acolhimento em abrigos sigilosos para mulheres sob risco de morte devido à violência doméstica.',
-              image: '/path/to/simbometade.png'
+
             },
             {
               title: 'PATRULHA MARIA DA PENHA',
               description: 'Atendimento especializado e preventivo da Polícia Militar para acompanhar mulheres que solicitaram Medidas Protetivas de Urgência.',
-              image: '/path/to/simbometade.png'
             },
             {
               title: 'MONITORAMENTO ELETRÔNICO',
               description: 'Atendimento prioritário para mulheres sob risco de violência doméstica e familiar.',
-              image: '/path/to/simbometade.png'
             }
           ].map((card, index) => (
             <div key={index} className="servico-macro-card">
               <div className="servico-macro-card-header">
-                <img src={card.image} alt={card.title} />
+                <img src={logo} alt={card.title} />
                 <span>{card.title}</span>
               </div>
               <p className="servico-macro-card-description">{card.description}</p>
-              <button className="servico-macro-more-button" onClick={() => { /* Lógica para saber mais */ }}>
+              <button className="servico-macro-more-button" onClick={() => { navigate('/app/serviceInformation') }}>
                 <span>SAIBA MAIS</span>
-                <img src="/path/to/ladinhoseta.png" alt="Seta" />
+                <img src= {arrow} />
               </button>
             </div>
           ))}
